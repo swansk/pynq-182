@@ -12,7 +12,7 @@ To accomplish our goals, we made use of the PYNQ-Z2 board which is based on the 
 
 Our specific design makes use of AXI streaming to the Vivado FFT IP, a block diagram of our design is shown below.
 
-![Block Diagram](./images/fft-block-diagram.png)
+![Block Diagram](./images/fft-block-diagram.PNG)
 
 ## Analysis
 
@@ -31,7 +31,7 @@ In designing this project we initially intended to design our own FFT IP block w
 
 These optimizations are visualized with in the following Pareto graph.
 
-![Pareto Graph](./images/pareto.png)
+![Pareto Graph](./images/pareto.PNG)
 
 In the end we decided to go with the "Pipeline inner loop" optimization as it provided the best value with tradeoffs between latency and FPGA Area.
 
@@ -46,7 +46,7 @@ The input to the FFT is described below:
 | XK_RE      | bxk   | Yes    | Real component (bxn = 8 - 34) in twos complement or single precision floating-point format.       |
 | XK_IM      | bxk   | Yes    | Imaginary component (bxn = 8 - 34) in twos complement or single precision floating-point format.  |
 
-![FFT Input Format](./images/fft-input.png)
+![FFT Input Format](./images/fft-input.PNG)
 
 The output from the FFT is described below:
 
@@ -55,7 +55,7 @@ The output from the FFT is described below:
 | XK_RE      | bxk   | Yes - sign extended | Real component in twos complement or floating-point format. (For scaled arithmetic and block floating-point arithmetic, bxk = bxn. For unscaled arithmetic, bxk = bxn + log2 (maximum point size) +1. For single precision floating-point bxk = 32). |
 | XK_IM      | bxk   | Yes - sign extended | Imaginary component in twos complement or single precision floating-point format. (For scaled arithmetic and block floating-point arithmetic, bxk = bxn. For unscaled arithmetic, bxk = bxn+ log2(maximum point size) +1. For single precision floating-point bxk = 32). |
 
-![FFT Output Format](./images/fft-output.png)
+![FFT Output Format](./images/fft-output.PNG)
 
 While our project does successfully write to the AXI Stream, and data is properly transferred to the FFT block from AXI Direct Memory Access, it seems that our data format may be incorrect. This is something that could be improved upon by anyone who is interested in taking up this project.
 
@@ -67,7 +67,7 @@ If you would like to get lightstrip control working with this project, please co
 
 For our implemenation, we used 3 logic level N-Channel MOSFETs with a terminal voltage ~3.1V. We additionally used 3 10kOhm resistors.
 
-![Wire hookups](./images/rgb-control.png)
+![Wire hookups](./images/rgb-control.PNG)
 
 ### Steps
 
