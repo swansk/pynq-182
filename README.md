@@ -67,7 +67,7 @@ If you would like to get lightstrip control working with this project, please co
 
 For our implemenation, we used 3 logic level N-Channel MOSFETs with a terminal voltage ~3.1V. We additionally used 3 10kOhm resistors.
 
-![Wire hookups](./images/rgb-control.PNG)
+![Wire hookups](./images/rgb-control.png)
 
 ### Steps
 
